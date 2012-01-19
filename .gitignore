@@ -1,1 +1,5 @@
-.eclipse
+.settings
+.classpath
+.project
+bin
+appOut.txt
