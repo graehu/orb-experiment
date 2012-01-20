@@ -18,7 +18,7 @@ public class TestGameState extends BasicGameState
 	public void init(GameContainer _gc, StateBasedGame _sbg)
 			throws SlickException {
 		// TODO Auto-generated method stub
-		m_scene = new Scene(_gc, "default.tmx");
+		m_scene = new Scene(_gc, "default");
 		
 		PlayerEntity player = new PlayerEntity(m_scene, null);
 	}

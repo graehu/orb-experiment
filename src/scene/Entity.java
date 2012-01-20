@@ -25,6 +25,5 @@ public abstract class Entity
 	
 	protected abstract void render();	
 	
-	protected Vector2f m_pos = new Vector2f();
-	
+	protected Vector2f m_pos = new Vector2f();	
 }

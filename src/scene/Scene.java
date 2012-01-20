@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.tiled.TiledMap;
 
 
 /**
@@ -14,12 +13,10 @@ import org.newdawn.slick.tiled.TiledMap;
  */
 public class Scene 
 {
-	public TiledMap m_TiledMap = null;
-	
 	public Scene(GameContainer _gc, String _mapFileRef) throws SlickException
 	{
 		m_gc = _gc;
-		m_TiledMap = new TiledMap("data/maps/"+_mapFileRef);
+		Level.getInstance().loadMap(_mapFileRef);
 	}
 	
 	public void update(float _dt)
@@ -30,7 +27,7 @@ public class Scene
 	
 	public void render()
 	{
-		m_TiledMap.render(0, 0);
+		Level.getInstance().render((int)m_entities.get(0).m_pos.x*-1, (int)m_entities.get(0).m_pos.y*-1);
 		
 		for(Entity e : m_entities)
 			e.render();
