@@ -25,7 +25,7 @@ public abstract class CharacterEntity extends Entity {
 	@Override
 	protected void render() {
 		// TODO Auto-generated method stub
-		m_image.draw(0, 0);
+		m_image.draw(0,0);
 	}
 	
 	@Override

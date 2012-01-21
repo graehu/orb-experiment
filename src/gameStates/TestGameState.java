@@ -1,5 +1,6 @@
 package gameStates;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
@@ -26,13 +27,14 @@ public class TestGameState extends BasicGameState
 	@Override
 	public void render(GameContainer _gc, StateBasedGame _sbg, Graphics _g)
 			throws SlickException {
-		m_scene.render();
+		_g.setColor(Color.cyan);
+		m_scene.render(_g);
 	}
 
 	@Override
 	public void update(GameContainer _gc, StateBasedGame _sbg, int _dt)
 			throws SlickException {
-		m_scene.update(Math.min(0.16f, _dt / 1000.0f));
+		m_scene.update(Math.min(0.016f, _dt / 1000.0f)); //cap max delta time to 1/60 of a second
 		
 		if(_gc.getInput().isKeyPressed(Input.KEY_ESCAPE))
 			_gc.exit();

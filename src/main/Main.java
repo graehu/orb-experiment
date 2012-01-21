@@ -25,9 +25,9 @@ public class Main extends StateBasedGame
      */
     public static void main(String[] arguments) throws FileNotFoundException
     {        
-    	//Stream errors to file
-        File outputFile = new File("appOut.txt");
-        PrintStream errorStream = new PrintStream(outputFile);
+    	//FIXME: Stream errors to file
+        //File outputFile = new File("appOut.txt");
+        //PrintStream errorStream = new PrintStream(outputFile);
         //System.setOut(errorStream);
         
         //Load application

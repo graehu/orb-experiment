@@ -1,5 +1,6 @@
 package scene;
 
+import org.newdawn.slick.geom.Shape;
 import org.newdawn.slick.geom.Vector2f;
 
 public abstract class Entity 
@@ -23,7 +24,13 @@ public abstract class Entity
 	
 	protected abstract void update(float _dt);
 	
-	protected abstract void render();	
+	protected abstract void render();
 	
-	protected Vector2f m_pos = new Vector2f();	
+	protected abstract void onIntersection(Entity _other);
+	
+	public float m_cR = 0.1f;
+	public Shape m_shape = null;
+	protected Vector2f m_pos = new Vector2f();
+	
+	
 }
